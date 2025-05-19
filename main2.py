@@ -45,7 +45,7 @@ def process_forecast():
     df = pd.DataFrame({"kWh": values}, index=pd.to_datetime(timestamps))
 
     # ARIMA model
-    model = ARIMA(df["kWh"], order=(1, 1, 1))
+    model = ARIMA(df["kWh"], order=(5, 0, 1))
     model_fit = model.fit()
 
     forecast_steps = expected_points - len(values)

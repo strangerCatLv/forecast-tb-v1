@@ -6,7 +6,7 @@ import pandas as pd
 import time
 from urllib.parse import urlparse, parse_qs
 
-url = "http://127.0.0.1:4000/data"
+url = "http://0.0.0.0:4000/data"
 
 def wait_for_data(max_attempts=10, delay=2):
     for attempt in range(max_attempts):
@@ -62,7 +62,7 @@ def process_forecast():
     }
 
     try:
-        resp = requests.post("http://127.0.0.1:4000/sendToTB", json=result)
+        resp = requests.post("http://0.0.0.0:4000/sendToTB", json=result)
         resp.raise_for_status()
         print("Forecast success\n")
     except requests.exceptions.RequestException as e:

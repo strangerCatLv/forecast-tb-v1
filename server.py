@@ -36,4 +36,4 @@ def send_send_to_tb():
     return jsonify({"message": "Belum ada data sendToTB"}), 404
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=15889)
+    app.run(host='0.0.0.0', port=4000)

@@ -2,5 +2,4 @@ requests
 matplotlib
 statsmodels
 pandas
-urllib
 flask-cors
